@@ -20,5 +20,11 @@ class MyTestCase(unittest.TestCase):
         # 30 ms
         self.assertLess(end - start, 0.03)
 
+    def test_trivial_case(self):
+        first_word = "ab"
+        second_word = "ba"
+
+        self.assertTrue(Solution().isAnagram(first_word, second_word))
+
 if __name__ == '__main__':
     unittest.main()
