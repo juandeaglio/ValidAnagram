@@ -26,5 +26,18 @@ class MyTestCase(unittest.TestCase):
 
         self.assertTrue(Solution().isAnagram(first_word, second_word))
 
+    def test_anagram_with_different_letter_ordering(self):
+        first_word = "dgqztusjuu"
+        second_word = "dqugjzutsu"
+
+        self.assertTrue(Solution().isAnagram(first_word, second_word))
+
+    def test_edge_case(self):
+        first_word = "aacc"
+        second_word = "ccac"
+
+        self.assertFalse(Solution().isAnagram(first_word, second_word))
+
+
 if __name__ == '__main__':
     unittest.main()
